@@ -71,3 +71,18 @@ document.addEventListener("scroll", function() {
         header.classList.remove("navbar-scrolled");
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    serviceCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const url = card.getAttribute('data-url');
+            if(url){
+                window.location.href = url; 
+            }
+            
+        });
+    });
+});
